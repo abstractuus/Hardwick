@@ -1,0 +1,7 @@
+{
+    "name": "Reload",
+    "description": "Unloads and reinitializes a specified command.",
+    "aliases": [],
+    "tip": "Try to state the command's name correctly",
+    "usage": "+reload <command>"
+}

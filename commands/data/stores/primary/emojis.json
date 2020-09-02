@@ -1,0 +1,7 @@
+{
+    "name": "Emojis",
+    "description": "Displays a list of the server's custom emojis",
+    "aliases": [],
+    "tip": "Hover over an emoji to see the name.",
+    "usage": "+emojis"
+}

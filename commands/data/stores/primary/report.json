@@ -1,0 +1,7 @@
+{
+    "name": "Report",
+    "description": "Sends a report of a known bug with Hardwick that you may have discovered, directly to the developer.",
+    "aliases": [],
+    "tip": "Your issue **MUST** be related to a non-functioning feature of Hardwick™. This command should not be used for anything other than its intended purpose.",
+    "usage": "+report <bug>"
+}

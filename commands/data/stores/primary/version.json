@@ -1,0 +1,7 @@
+{
+    "name": "Version",
+    "description": "Displays changelog for specified version",
+    "aliases": [],
+    "tip": "Enter a version number after +version. Example: +version 1.0.0.",
+    "usage": "+version <list> OR +version <version#>"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Invite",
+    "description": "Displays a bot invite link for Hardwick.",
+    "aliases": [],
+    "tip": "Make sure you are allowed to invite Hardwick to different servers!",
+    "usage": "+invite"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Warn",
+    "description": "Warns a user you mentioned",
+    "aliases": [],
+    "tip": "Try this command when you have the permission 'Ban Members' / Kick Members or 'Administrator.",
+    "usage": "+warn <@user> <reason>"
+}

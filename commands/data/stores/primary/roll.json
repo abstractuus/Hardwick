@@ -1,0 +1,7 @@
+{
+    "name": "Roll",
+    "description": "Hardwick rolls a virtual dice and displays the number",
+    "aliases": [],
+    "tip": "Hardwick's virtual dice has a single dice mode.",
+    "usage": "+roll"
+}

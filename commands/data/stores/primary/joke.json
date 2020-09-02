@@ -1,0 +1,7 @@
+{
+    "name": "Joke",
+    "description": "Tells a joke/riddle.",
+    "aliases": [],
+    "tip": "Hardwick and its developers are not responsible for any cringe endured.",
+    "usage": "+joke"
+}

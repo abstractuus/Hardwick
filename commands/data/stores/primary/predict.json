@@ -1,0 +1,7 @@
+{
+    "name": "Predict",
+    "description": "Ask silly questions and get your future foretold!",
+    "aliases": [],
+    "tip": "Must be a yes/no question.",
+    "usage": "+predict <question>"
+}

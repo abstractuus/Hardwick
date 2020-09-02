@@ -1,0 +1,48 @@
+{
+  "name": "hardwickdev",
+  "version": "1.10.0",
+  "description": "Testing new Hardwick features.",
+  "main": "core.js",
+  "scripts": {
+    "start": "node core.js"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "author": "Abstractus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abstractuus/Prismal/issues"
+  },
+  "homepage": "https://github.com/abstractuus/Prismal#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "better-sqlite-pool": "^0.1.2",
+    "bot-utils": "^1.4.2",
+    "canvas-constructor": "^1.0.1",
+    "chalk": "^2.4.1",
+    "chance": "^1.0.16",
+    "circular-json": "^0.5.5",
+    "cpu-stat": "^2.0.1",
+    "d.js-command-handler": "^1.2.3",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "google-translate-api": "^2.3.0",
+    "html-entities": "^1.2.1",
+    "https": "^1.0.0",
+    "i": "^0.3.6",
+    "mathjs": "^5.10.3",
+    "minimist": "^1.2.0",
+    "moment": "^2.27.0",
+    "moment-duration-format": "^2.3.2",
+    "ms": "^2.1.1",
+    "os": "^0.1.1",
+    "quick.db": "^7.1.1",
+    "relevant-urban": "^2.0.0",
+    "simple-youtube-api": "^5.0.2",
+    "relevant-urban": "3.6.4",
+    "steam-provider": "^0.3.2",
+    "string-similarity": "^1.2.0",
+    "superagent": "^3.8.3"
+  }
+}

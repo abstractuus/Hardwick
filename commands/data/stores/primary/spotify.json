@@ -1,0 +1,7 @@
+{
+    "name": "Spotify",
+    "description": "Displays in chat what a user is listening to on spotify",
+    "aliases": [],
+    "tip": "Make sure that you are visibly listening to spotify on discord",
+    "usage": "+spotify OR +spotify <@user>"
+}

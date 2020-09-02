@@ -1,0 +1,7 @@
+{
+    "name": "Calc",
+    "description": "Calculates mathematical equations",
+    "aliases": [],
+    "tip": "This is reserved for non big brained people.",
+    "usage": "+calc <equation>"
+}
