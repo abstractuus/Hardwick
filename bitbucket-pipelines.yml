@@ -3,5 +3,5 @@ clone:
 pipelines:
   default:
     - step:
-      script:
-        - git push --mirror git@github.com:YourOrg/mirror-repo.git
+        script:
+          - git push --mirror git@github.com:abstractuus/Hardwick.git
