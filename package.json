@@ -17,7 +17,7 @@
   "homepage": "https://github.com/abstractuus/Prismal#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "better-sqlite-pool": "^0.1.2",
+    "better-sqlite-pool": "^0.3.0",
     "bot-utils": "^1.4.2",
     "canvas-constructor": "^1.0.1",
     "chalk": "^2.4.1",
@@ -40,7 +40,6 @@
     "quick.db": "^7.1.1",
     "relevant-urban": "^2.0.0",
     "simple-youtube-api": "^5.0.2",
-    "relevant-urban": "3.6.4",
     "steam-provider": "^0.3.2",
     "string-similarity": "^1.2.0",
     "superagent": "^3.8.3"
