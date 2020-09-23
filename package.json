@@ -1,20 +1,21 @@
 {
-  "name": "hardwickdev",
-  "version": "1.10.0",
-  "description": "Testing new Hardwick features.",
+  "name": "hardwick",
+  "version": "3.0.0",
+  "description": "Hardwick is a next level intuitive experience with Prismal under its hood.",
   "main": "core.js",
   "scripts": {
     "start": "node core.js"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "type": "git",
+    "url": "git+https://github.com/abstractuus/Hardwick-For-Discord"
   },
   "author": "Abstractus",
-  "license": "ISC",
+  "license": "GPL-2.0-only",
   "bugs": {
-    "url": "https://github.com/abstractuus/Prismal/issues"
+    "url": "https://github.com/abstractuus/Hardwick-For-Discord/issues"
   },
-  "homepage": "https://github.com/abstractuus/Prismal#readme",
+  "homepage": "https://github.com/abstractuus/Hardwick-For-Discord#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "better-sqlite-pool": "^0.3.0",
