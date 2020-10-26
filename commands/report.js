@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
 
     if(!args.join(' ')) {
@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
         .setFooter("Hardwick™")
 
 
-        client.users.cache.get("643884613961252915").send(embed)
+        Client.users.cache.get("643884613961252915").send(embed)
 
         message.channel.send(public).then(sentMessage => sentMessage.edit(public2));
 

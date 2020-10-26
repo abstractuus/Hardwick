@@ -1,6 +1,6 @@
 Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
  var sayings = [
 "Can a kangaroo jump higher than a house? Of course, a house doesn’t jump at all.",

@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args) => {
+exports.run = async (Client, message, args) => {
 
         message.delete(100); 
     
@@ -10,14 +10,14 @@ exports.run = async (client, message, args) => {
 
     let msgping1 = new Date();
 
-    let clientping = new Date() - message.createdAt;
+    let Clientping = new Date() - message.createdAt;
 
     let msgping2 = new Date() - msgping1;
 
     let pingembed = new Discord.RichEmbed()
     .setThumbnail("http://solarflare.com/Media/Default/ICONS/White/Solarflare_UltraHighBandwidth_300x300White.png")
         .setColor(15724786)
-        .addField("API Latency", `${Math.round(client.ping)}ms`)
+        .addField("API Latency", `${Math.round(Client.ping)}ms`)
         .addField('Message Ping: ', '~' + Math.round(msgping2) + 'ms')
         .setFooter("Hardwick™")
 

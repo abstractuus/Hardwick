@@ -1,6 +1,6 @@
 
 
-exports.run = async (client, message, args) => {
+exports.run = async (Client, message, args) => {
 
     // get the delete count as an actual number.
     const amount = args.join(' '); // Amount of messages which should be deleted

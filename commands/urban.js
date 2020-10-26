@@ -1,7 +1,7 @@
 const urban = require('relevant-urban'),
  Discord = require('discord.js');
 
-exports.run = async (client, message, args) => {
+exports.run = async (Client, message, args) => {
     if (!args[0]) {
 
       const error  = new Discord.MessageEmbed()

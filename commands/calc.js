@@ -1,21 +1,17 @@
 const math = require('mathjs');
 const Discord = require('discord.js');
+const path = require('path');
 
 
-exports.run = (client, message, args) => {
-
-    if (!args.join(" ")) {
-        const Discord = require('discord.js');
-        const error = new Discord.MessageEmbed()
-        .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-        .setColor(15724786)
-        .addField("**Usage:**", "calc <equation>")
-        .addField("**Guidelines:**", "Please enter a calculation to be solved.")
-        .setFooter("Hardwick™")
-
-        message.channel.send(error);
+exports.run = (Client, message, args) => {
+    const PmlClient = require(path.resolve(__dirname, '../core'));
+    const Prismal = new PmlClient(Client, message);
+    
+    if (!args.join(' ')) {
+        let helpScript = require('./help.js')
+        helpScript.run(Client, message, args = 'calc');
+        Prismal.derror('calc', 'No subcommand specified, contacting help handler');
         return;
-
     }
 
     const question = args.join(" ");
@@ -24,26 +20,31 @@ exports.run = (client, message, args) => {
     try {
         answer = math.eval(question);
     } catch (err) {
-        const Discord = require('discord.js');
-        const error = new Discord.MessageEmbed()
-        .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-        .setColor(15724786)
-        .addField("**Error:**", `${err}`)
-        .addField("**Usage:**", "calc <equation>")
-        .addField("**Guidelines:**", "Please enter a **valid** equation to be solved.")
-        .setFooter("Hardwick™")
-        return message.channel.send(error)
+        Prismal.newPrompt({
+            type: 'error',
+            title: 'calc',
+            thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png",
+            content: 'Please enter a **valid** equation to be solved.',
+            footer: 'Hardwick'
+            
+        })
     }
-
-    const Discord = require('discord.js');
-    const embed = new Discord.MessageEmbed()
-        .setThumbnail("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/calculator-icon.png")
-        .setColor(15724786)
-        .addField("**Input:**", question, true)
-        .addField("**Result:**", answer)
-        .setFooter("Hardwick™")
-
-    message.channel.send({
-        embed
+    
+    Prismal.newPrompt({
+        type: 'generic',
+        title: 'Calculator',
+        thumbnail: "http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/calculator-icon.png",
+        color: '#FDFDFD',
+        content: [
+            {
+                name: 'Input',
+                value: question
+            },
+            {
+                name: 'Result',
+                value: answer
+            }
+        ],
+        footer: 'Hardwick'
     })
 };

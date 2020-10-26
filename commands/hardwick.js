@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
 const done = new Discord.MessageEmbed()
 .setColor(15724786)

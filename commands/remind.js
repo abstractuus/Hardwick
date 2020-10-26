@@ -2,7 +2,7 @@ const ms = require("ms");
 const Discord = require('discord.js')
 
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
 
 

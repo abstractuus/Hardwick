@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
         //message.delete(100);
 

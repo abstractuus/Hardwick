@@ -7,7 +7,7 @@ let cpuStat = require("cpu-stat")
 const ms = require("ms")
 
 
-exports.run = (client, message, args, tools) => {
+exports.run = (Client, message, args, tools) => {
     const done = new Discord.MessageEmbed()
     .setAuthor("Hardwick Control Panel")
     .setColor(15724786)
@@ -47,23 +47,23 @@ exports.run = (client, message, args, tools) => {
                 return console.log(err);
             }
 
-            const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+            const duration = moment.duration(Client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
             const embedStats = new Discord.MessageEmbed()
                 .setTitle("**Hardwick Status:**")
                 .setColor(15724786)
                 .setThumbnail("https://i.imgur.com/fmkv90A.png")
                 .addField("⭐ Memory Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
                 .addField("• Uptime ", `${duration}`, true)
-                .addField("• Users", `${client.users.size}`, true)
-                .addField("• Servers", `${client.guilds.size}`, true)
-                .addField("• Channels ", `${client.channels.size}`, true)
+                .addField("• Users", `${Client.users.size}`, true)
+                .addField("• Servers", `${Client.guilds.size}`, true)
+                .addField("• Channels ", `${Client.channels.size}`, true)
                 .addField("• Discord.js", `v${version}`, true)
                 .addField("• Node", `${process.version}`, true)
                 .addField("• CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
                 .addField("• CPU usage", `\`${percent.toFixed(2)}%\``, true)
                 .addField("• Arch", `\`${os.arch()}\``, true)
                 .addField("• Platform", `\`\`${os.platform()}\`\``, true)
-                .addField("API Latency", `${Math.round(client.ping)}ms`)
+                .addField("API Latency", `${Math.round(Client.ping)}ms`)
             message.channel.send(embedStats)
         });
     });

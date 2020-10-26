@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
-    client.generateInvite().then(link => {
+    Client.generateInvite().then(link => {
 
         var embed = new Discord.MessageEmbed()
         .setThumbnail("https://pbs.twimg.com/media/Dj3fVupV4AAhIwD.png:large")

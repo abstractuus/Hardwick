@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 var path = require('path');
-const memes = require( path.resolve( __dirname, "./data/stores/primary/meme.json") );
-const memeSource = require( path.resolve( __dirname, "./data/stores/secondary/memesource.json") );
+const memes = require( path.resolve( __dirname, "./data/stores/meme.json") );
+const memeSource = require( path.resolve( __dirname, "./data/assets/memesource.json") );
 
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
   if(args.join("") == "list") {
   const list = new Discord.MessageEmbed()

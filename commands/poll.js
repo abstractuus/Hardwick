@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = async (client, message, args, tools) => {
+exports.run = async (Client, message, args, tools) => {
 
   if (!message.member.hasPermission('MANAGE_GUILD') && message.author.id !== '251397854562746368') return message.channels.send({embed: {
     color: 14059054,

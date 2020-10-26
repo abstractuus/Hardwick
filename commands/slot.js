@@ -1,6 +1,6 @@
 Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
 var replys1 = [
     ":gem: : :gem: : :gem: ",

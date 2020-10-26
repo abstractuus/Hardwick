@@ -1,4 +1,4 @@
-exports.run = async (client, message, level) => {
+exports.run = async (Client, message, level) => {
 
     message.channel.send('**BISSSSHES IM SMOKING**').then(async msg => {
         setTimeout(() => {

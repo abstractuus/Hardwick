@@ -1,5 +1,5 @@
 Discord = require('discord.js');
-exports.run = (client, message, args) => {
+exports.run = (Client, message, args) => {
 
         if(!args.join(' ')) {
 
