@@ -1,30 +1,37 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
+const path = require("path");
 
 exports.run = (Client, message, args) => {
+  const PmlClient = require(path.resolve(__dirname, "../core"));
+  const Prismal = new PmlClient(Client, message);
 
-      const rolled = Math.floor(Math.random() * 2) + 1;
+  const rolled = Math.floor(Math.random() * 2) + 1;
 
-      let headembed = new Discord.MessageEmbed()
-      .setAuthor(`Coin Flip`)
-      .addField(`Result:`, `You flipped onto: **Heads**!`)
-      .setThumbnail(`${message.author.displayAvatarURL()}`)
-      .setColor(15724786);
-
-      let tailembed = new Discord.MessageEmbed()
-      .setAuthor(`Coin Flip`)
-      .addField(`Result:`, `You flipped onto: **Tails**!`)
-      .setThumbnail(`${message.author.displayAvatarURL()}`)
-      .setColor(15724786);
-
-      if (rolled == "1")
-
-      {
-        message.channel.send(tailembed);
-      }
-      if (rolled == "2")
-      {
-        message.channel.send(headembed);
-
-      }
-
-    }
+  if (rolled == "1") {
+    Prismal.newPrompt({
+      type: "generic",
+      title: "Coin Flip",
+      content: [
+        {
+          name: "Result:",
+          value: "You got **heads**!",
+        },
+      ],
+      thumbnail: `${message.author.displayAvatarURL()}`,
+      color: "#FDFDFD",
+    });
+  } else if (rolled == "2") {
+    Prismal.newPrompt({
+      type: "generic",
+      title: "Coin Flip",
+      content: [
+        {
+          name: "Result:",
+          value: "You got **tails**!",
+        },
+      ],
+      thumbnail: `${message.author.displayAvatarURL()}`,
+      color: "#FDFDFD",
+    });
+  }
+};
