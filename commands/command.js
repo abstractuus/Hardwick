@@ -31,7 +31,10 @@ exports.run = (Client, message, args, devPerms) => {
       type: "generic",
       title: "Commands recognized",
       content: commandList,
-      tmpTime: 10,
+      color: '#FDFDFD',
+      thumbnail: 'https://www.iconsdb.com/icons/preview/white/code-xxl.png',
+      footer: 'Hardwick',
+      tmpTime: 10
     });
   }
   if (args[0] == "reload") {
@@ -39,9 +42,12 @@ exports.run = (Client, message, args, devPerms) => {
       delete require.cache[require.resolve(`./${args[1]}.js`)];
       Prismal.newPrompt({
         type: "generic",
-        title: "✅ Reload succeeded",
+        title: "Command reloaded",
         content: `${process.env.BotName} has reloaded **${args[1]}**.`,
-        tmpTime: 5,
+        thumbnail: 'https://www.iconsdb.com/icons/preview/white/refresh-2-xxl.png',
+        footer: 'Hardwick',
+        color: '#FDFDFD',
+        tmpTime: 5
       });
     } else {
       Prismal.newPrompt({

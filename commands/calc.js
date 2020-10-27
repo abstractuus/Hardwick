@@ -33,7 +33,7 @@ exports.run = (Client, message, args) => {
     type: "generic",
     title: "Calculator",
     thumbnail:
-      "http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/calculator-icon.png",
+      "https://www.iconsdb.com/icons/preview/white/calculator-8-xxl.png",
     color: "#FDFDFD",
     content: [
       {
