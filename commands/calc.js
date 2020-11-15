@@ -17,7 +17,7 @@ exports.run = (Client, message, args) => {
 
   let answer;
   try {
-    answer = math.eval(question);
+    answer = math.evaluate(question);
   } catch (err) {
     Prismal.newPrompt({
       type: "error",

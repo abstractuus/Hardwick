@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 var path = require('path');
-const memes = require( path.resolve( __dirname, "./data/stores/meme.json") );
-const memeSource = require( path.resolve( __dirname, "./data/assets/memesource.json") );
+const memes = require( path.resolve( __dirname, "../data/stores/meme.json") );
+const memeSource = require( path.resolve( __dirname, "../data/assets/memesource.json") );
 
 
 exports.run = (Client, message, args) => {

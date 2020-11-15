@@ -1,0 +1,168 @@
+{
+    "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.0.2",
+        "1.0.3",
+        "1.0.4",
+        "1.0.5",
+        "1.0.6",
+        "1.0.7",
+        "2.0.0",
+        "3.0.0"
+    ],
+    "100": {
+        "logDate": "05/08/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.0"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Meme command has been restored and is fully working. Please stand by until we add more videos.\n- So far there is only 1 command 'takealook'\n- Help command has been exponentially improved as well as changelog command.\n- Improved the calc command.\n- Added the invite command.\n- Improved the skip command.\n- Improved the design of the Flip/Roll commands.\n- Added a test command to test latency.\n- Added this changelog command.\n- Removed the ability to run commands from DMs."
+            }
+        ]
+    },
+    "101": {
+        "logDate": "07/08/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.1"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Refined the translate command and released it to the public.\n- Added the command to the help page."
+            }
+        ]
+    },
+    "102": {
+        "logDate": "08/08/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.2"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Improved joke embed.\n- Added report command.\n- Added report info to the help command.\n- Added notifications to Abstractus for when Hardwick joins/leaves a server.\n- Fundamentally improved the 8ball embed and changed to command from \"8ball\" to \"predict\".\n- Added the command \"hardwick\" (Check +help for more info on what it does.)\n- Added a shutdown command that only Abstractus can use."
+            }
+        ]
+    },
+    "103": {
+        "logDate": "15/08/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.3"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Improved the status embed; \"Date Created:\"\n- Added emoji command. (Displays the number of emojis present on a server and lists them.)\n- Mended the help command as the 2000 character limit prevented the it from functioning."
+            }
+        ]
+    },
+    "104": {
+        "logDate": "08/09/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.4"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Added \"activity\" command. Only Abstractus can use it."
+            }
+        ]
+    },
+    "105": {
+        "logDate": "14/09/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.5"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Removed meme command. May return in the future.\n- Updated promo command with new content.\n- Added spotify command. Shows information about your current track.\n- Removed all music features for good :( Sorry.\n- Added version command. Do +version for more details."
+            }
+        ]
+    },
+    "106": {
+        "logDate": "15/09/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.6"
+            },
+            {
+                "name": "Changes:",
+                "value": "- Meme command has been restored and is fully working. Please stand by until I add more videos. So far there is only 1 command \"takealook\".\n- Spotify command is 100% completed.\n- Added hardwickstats command. (Allows you to see the \"nerdy\" stuff about Hardwick.)\n- Added roles command and created a moderation section within the features embed to prepare the moderation update."
+            }
+        ]
+    },
+    "107": {
+        "logDate": "18/09/18",
+        "content": [
+            {
+                "name": "Version:",
+                "value": "1.0.7"
+            },
+            {
+                "name": "Changes:",
+                "value": "- New material has been added to the meme command."
+            }
+        ]
+    },
+    "200": {
+        "logDate": "30/10/18",
+        "content": [
+            {
+                "name": "Dev notes:",
+                "value": "Sorry that this update took a while! Have fun."
+            },
+            {
+                "name": "Version:",
+                "value": "2.0.0"
+            },
+            {
+                "name": "New commands:",
+                "value": "- addrole\n- removerole\n- roleinfo\n- ban\n- kick\n- pardon\n- warn\n- latency\n- version\n- youtube"
+            },
+            {
+                "name": "Changes:",
+                "value": "- The limit for the sweep command is now set to 100 to prevent catastrophic super-nuking capabilities.\n- Changed the timer command to \"remind\" and gave it a makeover.\n- Removed the test command and replaced it with latency and improved the embed.\n- The meme command now has new content. Enjoy!\n- Look for the new commands in the help embed."
+            }
+        ]
+    },
+    "300": {
+        "logDate": "02/09/20",
+        "content": [
+            {
+                "name": "Dev notes:",
+                "value": "Sorry that this update took so long! We took a break but TWO whole years!"
+            },
+            {
+                "name": "Version:",
+                "value": "3.0.0 — **The Big Switch Update!**"
+            },
+            {
+                "name": "Prismal!",
+                "value": "We've been working on a universal Discord bot core to serve as a base for absolutely any bots you all would want to make. It is in the works but we've decided to switch Hardwick's core system to Prismal. There's powerful features under Hardwick's hood now which means faster development, so without further adieu!"
+            },
+            {
+                "name": "But wait, A! Any new commands?",
+                "value": "There unfortunately aren't any new commands since this update is meant as a switch to the new Prismal core. Jayson has ported over most of Hardwick's commands but they have decided to pull a couple of commands for reworking: such as moderation commands and some misc. commands. They'll be handled with love and care and will be re-added better than ever!"
+            },
+            {
+                "name": "Changes:",
+                "value": "- All previous meme content has been wiped and repopulated with current memes! (Goodbye stale 2018 memes)\n- Thanks to Prismal, Hardwick now has a dynamic help command feature! Try it out: +help <command>.\n- The roll command has been upgraded with dice functionality. This means you can now use this command to play your favourite board games!\n- Hardwick has a problem! They may have picked up a nasty habit. Try +smoke to find out."
+            },
+            {
+                "name": "What to expect next?",
+                "value": "We're glad you asked!\n- We have a few new commands in the works! (Love Compatibility anyone?)\n- New meme content is coming! Expect 50+ new pictures and videos for your enjoyment.\n- Due to upcoming Prismal updates, more technical changes under Hardwick's hood to make it as smooth an experience than ever. (New Command Handler and Graphical Manager integrations.)\n- Okay~ end of list, you can go about your business knowing that Hardwick 3 is here!"
+            }
+        ]
+    }
+}

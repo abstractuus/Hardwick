@@ -1,18 +1,39 @@
 const Discord = require('discord.js');
+const path = require('path');
 
 exports.run = (Client, message, args) => {
-
-	const embed = new Discord.MessageEmbed()
-
-		.setAuthor(message.guild.name)
-    .setColor('#dadfe8')
-		.addField('**Owner:**', `${message.guild.owner.user.tag}`)
-		.addField('**Date Created:**', `${message.guild.createdAt}`)
-		.setThumbnail(`${message.guild.iconURL()}`)
-		.addField('**Members:**', `${message.guild.memberCount}`)
-		.addField('**Humans:**', `${message.guild.members.cache.filter(member => !member.user.bot).size}`)
-		.addField('**Bots:**', `${message.guild.members.cache.filter(member => member.user.bot).size}`)
-
-	message.channel.send(embed);
-
+	const PmlClient = require(path.resolve(__dirname, '../core'));
+	const Prismal = new PmlClient(Client, message);
+	
+	let guildCreatedAt = message.guild.createdAt.toUTCString();
+	
+	Prismal.newPrompt({
+		type: 'generic',
+		title: message.guild.name,
+		color: '#FDFDFD',
+		thumbnail: message.guild.iconURL(),
+		content: [
+			{
+				name: 'Owner:',
+				value: message.guild.owner.user.tag
+			},
+			{
+				name: 'Date Created:',
+				value: guildCreatedAt
+			},
+			{
+				name: 'Members:',
+				value: message.guild.memberCount
+			},
+			{
+				name: 'Humans:',
+				value: message.guild.members.cache.filter(member => !member.user.bot).size
+			},
+			{
+				name: 'Bots:',
+				value: message.guild.members.cache.filter(member => member.user.bot).size
+			}
+		],
+		footer: 'Hardwick'
+	})
 }

@@ -1,18 +1,25 @@
 const Discord = require("discord.js");
-
+const path = require('path');
 
 exports.run = (Client, message, args) => {
-
-
+    const PmlClient = require(path.resolve(__dirname, '../core'));
+    const Prismal = new PmlClient(Client, message);
+    
     const rolled = Math.floor(Math.random() * 6) + 1;
-
-      let embed = new Discord.MessageEmbed()
-      .setAuthor(`Single Dice Roll`)
-      .addField("You rolled:", rolled)
-      .setThumbnail(`${message.author.displayAvatarURL()}`)
-      .setColor(15724786);
-
-      message.channel.send(embed);
-      return;
-
+    
+    Prismal.newPrompt({
+        type: 'generic',
+        title: 'Single dice roll',
+        content: [
+            {
+                name: 'You rolled:',
+                value: rolled
+            }
+        ],
+        thumbnail: message.author.displayAvatarURL(),
+        color: '#FDFDFD',
+        footer: 'Hardwick',
+        tmpTime: 5
+    });
+    return;
 }

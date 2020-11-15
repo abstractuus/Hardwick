@@ -1,48 +1,60 @@
-const urban = require('relevant-urban'),
- Discord = require('discord.js');
+const urban = require('relevant-urban');
+const Discord = require('discord.js');
+const path = require('path');
 
 exports.run = async (Client, message, args) => {
+    const PmlClient = require(path.resolve(__dirname, '../core'));
+    const Prismal = new PmlClient(Client, message);
+    // If no word given, contact help handler
+    
     if (!args[0]) {
-
-      const error  = new Discord.MessageEmbed()
-          .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-          .setColor(15724786)
-          .addField("**Usage:**", "+urban <word>")
-          .addField("**Tip:**", "Results may be vulgar.")
-          .setFooter("Hardwick™")
-
-      message.channel.send(error);
-      return;
-
+        const helpScript = require(path.resolve(__dirname, './help.js'));
+        helpScript.run(Client, message, (args = 'urban'));
+        Prismal.derror('urban', 'No word specified, contacting help handler');
     }
-
-    let res = await urban(args.join(' ')).catch(e => {
-
-      const error = new Discord.MessageEmbed()
-          .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-          .setColor(15724786)
-          .addField("**Error:**", "That word was not found")
-          .addField("**Usage:**", "+urban <word>.")
-          .setFooter("Hardwick™")
-
-      message.channel.send(error);
-
+    
+    let res = await urban(args.join(' ')).catch (e => {
+        Prismal.newPrompt({
+            type: 'error',
+            title: 'urban',
+            content: [
+                {
+                    name: 'That search term was not found.',
+                    value: `**Usage:** ${process.env.GlobalPrefix}urban <query>`
+                }
+            ],
+            color: '#FDFDFD',
+            footer: 'Hardwick',
+            thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png'
+        });
     });
-
-    const embed = new Discord.MessageEmbed()
-    .setColor(15724786)
-    .setTitle(res.word)
-    .setURL(res.urbanURL)
-    .setDescription(`**Definition**\n*${res.definition}*\n\n**Example:**\n*${res.example}*`)
-    .addField('Author', res.author, true)
-    .addField('Rating', `**\`Upvotes: ${res.thumbsUp} | Downvotes: ${res.thumbsDown}\`**`)
-
-    if (res.tags.length > 0 && res.tags.join(', ').length < 1024) {
-
-        embed.addField('Tags', res.tags.join(', '), true)
-    }
-
-message.channel.send(embed);
-
-
+    
+    Prismal.newPrompt({
+        type: 'generic',
+        title: res.word,
+        url: res.urbanURL,
+        thumbnail: 'https://www.iconsdb.com/icons/preview/white/literature-xxl.png',
+        color: '#FDFDFD',
+        footer: 'Hardwick',
+        content: [
+            {
+                name: 'Definition:',
+                value: res.definition
+            },
+            {
+                name: 'Example:',
+                value: res.example
+            },
+            {
+                name: 'Author:',
+                value: res.author,
+                inline: true
+            },
+            {
+                name: 'Rating:',
+                value: `**\`Upvotes: ${res.thumbsUp} | Downvotes: ${res.thumbsDown}\`**`
+            }
+        ]
+    })
 }
+
