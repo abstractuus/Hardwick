@@ -1,17 +1,27 @@
-Discord = require('discord.js');
+const Discord = require('discord.js');
+const path = require('path');
 exports.run = (Client, message, args) => {
+       
+       const PmlClient = require(path.resolve(__dirname, '../core'));
+       const Prismal = new PmlClient(Client, message);
 
         if(!args.join(' ')) {
-
-                const embed = new Discord.MessageEmbed()
-                .setDescription("**Incorrect Usage!**")
-                .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-                .setColor(15724786)
-                .addField("**Usage:**", "+predict <question>", )
-                .addField("**Remember:**", "Must be a yes/no question.")
-                .setFooter("Hardwick™")
-
-                message.channel.send(embed);
+               Prismal.newPrompt({
+                      type: 'error',
+                      title: 'predict',
+                      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png',
+                      content: [
+                             {
+                                    name: 'Usage:',
+                                    value: '+predict <question>'
+                             },
+                             {
+                                    name: 'Remember:',
+                                    value: 'Must be a yes/no question.'
+                             }
+                      ],
+                      footer: `Hardwick | ${process.env.VersionNum}`
+               })
         return;
         }
         var sayings = ["It is certain",
@@ -38,12 +48,26 @@ exports.run = (Client, message, args) => {
         "Very doubtful"];
 
        var result = Math.floor((Math.random() * sayings.length) + 0);
-       const embed = new Discord.MessageEmbed()
-        .setThumbnail("https://pbs.twimg.com/media/DkC3aChU4AAtZkL.png:large")
-        .setColor(15724786)
-        .addField("**Asker:**", message.author.username + "#" + message.author.discriminator)
-        .addField("**Question:**",  args.join(' '))
-        .addField("**Prediction:**", sayings[result])
-        .setFooter("Hardwick™")
-       message.channel.send(embed)
+       
+       Prismal.newPrompt({
+              type: 'generic',
+              title: 'Here is my prediction...',
+              content: [
+                     {
+                            name: 'Asker:',
+                            value: `<@${message.author.id}>`
+                     },
+                     {
+                            name: 'Question:',
+                            value: args.join(' ')
+                     },
+                     {
+                            name: 'Prediction:',
+                            value: sayings[result]
+                     }
+              ],
+              thumbnail: 'https://pbs.twimg.com/media/DkC3aChU4AAtZkL.png:large',
+              color: '#FDFDFD',
+              footer: `Hardwick | ${process.env.VersionNum}`
+       })
        }

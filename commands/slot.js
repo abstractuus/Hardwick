@@ -81,6 +81,7 @@ exports.run = (Client, message, args) => {
         value: "** **"
       }
     ],
-    color: '#FDFDFD'
+    color: '#FDFDFD',
+    footer: `Hardwick | ${process.env.VersionNum}`
   });
 };

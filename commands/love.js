@@ -60,7 +60,7 @@ exports.run = (Client, message, args) => {
       },
     ],
     color: "#FDFDFD",
-    footer: "Hardwick",
+    footer: `Hardwick | ${process.env.VersionNum}`,
     thumbnail:
       "https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/hearts-icon-18-256.png",
   });

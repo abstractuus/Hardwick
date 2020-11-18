@@ -1,7 +1,7 @@
 {
-    "name": "Hardwick",
-    "description": "Provides a welcome note from my developer and me",
+    "name": "hardwick",
+    "description": "Provides a welcome note from my developers and I.",
     "aliases": [],
-    "tip": "Please consider donating to my developer. This helps with development costs.",
-    "usage": "+hardwick"
+    "tip": "Please consider donating to my developers. This helps with development costs.",
+    "usage": ""
 }

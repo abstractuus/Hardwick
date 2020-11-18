@@ -22,6 +22,6 @@ exports.run = async (Client, message, args) => {
     content: sayMessage,
     thumbnail: "https://www.iconsdb.com/icons/preview/white/speaker-xxl.png",
     color: "#FDFDFD",
-    footer: "Hardwick",
+    footer: `Hardwick | ${process.env.VersionNum}`
   });
 };

@@ -1,7 +1,7 @@
 {
-    "name": "Poll",
-    "description": "Generates a poll with desired topic for users to vote on",
+    "name": "poll",
+    "description": "Generates a poll with desired topic for users to vote on.",
     "aliases": [],
     "tip": "Make sure that you include the poll topic",
-    "usage": "+poll <topic>"
+    "usage": "<topic>"
 }

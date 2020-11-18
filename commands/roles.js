@@ -20,6 +20,6 @@ exports.run = async (Client, message, args) => {
     ],
     thumbnail: 'https://www.iconsdb.com/icons/preview/white/theatre-masks-xxl.png',
     color: '#FDFDFD',
-    footer: 'Hardwick'
+    footer: `Hardwick | ${process.env.VersionNum}`
   })
 }

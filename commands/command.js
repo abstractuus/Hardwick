@@ -33,7 +33,7 @@ exports.run = (Client, message, args, devPerms) => {
       content: commandList,
       color: '#FDFDFD',
       thumbnail: 'https://www.iconsdb.com/icons/preview/white/code-xxl.png',
-      footer: 'Hardwick',
+      footer: `Hardwick | ${process.env.VersionNum}`,
       tmpTime: 10
     });
   }
@@ -45,7 +45,7 @@ exports.run = (Client, message, args, devPerms) => {
         title: "Command reloaded",
         content: `${process.env.BotName} has reloaded **${args[1]}**.`,
         thumbnail: 'https://www.iconsdb.com/icons/preview/white/refresh-2-xxl.png',
-        footer: 'Hardwick',
+        footer: `Hardwick | ${process.env.VersionNum}`,
         color: '#FDFDFD',
         tmpTime: 5
       });
@@ -54,6 +54,8 @@ exports.run = (Client, message, args, devPerms) => {
         type: "error",
         title: "command reload",
         content: `You\'re not a verified developer of ${process.env.BotName}. Add developer IDs separated by \`|\` in your \`.env\` file.`,
+        thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png',
+        footer: `Hardwick | ${process.env.VersionNum}`
       });
     }
   }

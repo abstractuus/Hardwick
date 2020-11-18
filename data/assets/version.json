@@ -1,4 +1,5 @@
 {
+    "latest": "3.0.1",
     "versions": [
         "1.0.0",
         "1.0.1",
@@ -9,7 +10,8 @@
         "1.0.6",
         "1.0.7",
         "2.0.0",
-        "3.0.0"
+        "3.0.0",
+        "3.0.1"
     ],
     "100": {
         "logDate": "05/08/18",
@@ -162,6 +164,31 @@
             {
                 "name": "What to expect next?",
                 "value": "We're glad you asked!\n- We have a few new commands in the works! (Love Compatibility anyone?)\n- New meme content is coming! Expect 50+ new pictures and videos for your enjoyment.\n- Due to upcoming Prismal updates, more technical changes under Hardwick's hood to make it as smooth an experience than ever. (New Command Handler and Graphical Manager integrations.)\n- Okay~ end of list, you can go about your business knowing that Hardwick 3 is here!"
+            }
+        ]
+    },
+    "301": {
+        "logDate": "17/11/20",
+        "content": [
+            {
+                "name": "Dev notes:",
+                "value": "- Hi Hardwick fans! It’s Michele from Abstractus here and I’m glad to finally be a part of the Hardwick team. Being the chief developer of Prismal, Jayson and I have been working closely to slowly swap out old codebases in exchange for new tech that can more closely integrate with some other Abstractus stuff in the future.\nAs a result, though, Melodore will be permanently merged into Hardwick for the unforeseeable future, with Hardwick reacquiring music functions. We believe this will improve our workflow in providing you with a better product experience, and we hope you enjoy our new Melo Engine for music in upcoming update 3.1.0. - Michele"
+            },
+            {
+                "name": "Version:",
+                "value": "3.0.1"
+            },
+            {
+                "name": "Key changes:",
+                "value": "- Rewrote the entire frontend for ALL of Hardwick\n- Refined design for a more streamlined, simplistic appearance\n- Made text more legible\n- Made future updates much easier with increased use of self-population lists and modular systems"
+            },
+            {
+                "name": "Design and functional improvements:",
+                "value": "- Rewrote `help` using Prismal’s `help` command template\n- Changed `help list` to `help`\n- Made `help` self-populating\n- Added `command` to replace `reload` and add a command list\n- Rewrote `hardwick` to fit the new team properly :-)\n- Improved the link display of `invite`\n- Fixed some typos and improved the look in the `love` command\n- Completely rewrote the `meme` command with a simpler list design\n- Improved design of `panel`, `poll`, `predict`, `remind`, `roleinfo`, and `roll`, `spotify`, `sweep`, `urban`, `warn`\n- DRASTIC redesign of `slot`\n- Made time entry on `status` more understandable and less redundant\n- Made `version` a self-populating command!"
+            },
+            {
+                "name": "Bugs squashed:",
+                "value": "- Fixed a bug where `calc` would not solve the math equation\n- Fixed a bug where `love` would not respond to user invocation\n- Fixed a bug where `latency` would display NaN as ping result\n- Fixed a bug where `meme` would not send any memes\n- Fixed a bug where `spotify` would not the user playing music on Spotify\n- Fixed a bug where `sweep` would not sweep the exact number of messages requested\n- Fixed a bug where `urban` would not populate the definition of said term"
             }
         ]
     }

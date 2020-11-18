@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
+const path = require('path');
 
 exports.run = async (Client, message, args, tools) => {
+  const PmlClient = require(path.resolve(__dirname, '../core'));
+  const Prismal = new PmlClient(Client, message);
 
   if (!message.member.hasPermission('MANAGE_GUILD') && message.author.id !== '251397854562746368') return message.channels.send({embed: {
     color: 14059054,
@@ -8,16 +11,20 @@ exports.run = async (Client, message, args, tools) => {
     }});
 
   if (!args.join(' ')) {
-
-    const error = new Discord.MessageEmbed()
-        .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png")
-        .setColor(15724786)
-        .addField("**Error:**", "Please add the topic of the poll.")
-        .addField("**Usage:**", "+poll <topic>")
-        .setFooter("Hardwick™")
-
-    message.channel.send(error);
-
+    Prismal.newPrompt({
+      type: 'error',
+      title: 'poll',
+      content: [
+        {
+          name: 'Error:',
+          value: 'Please add the topic of the poll.'
+        },
+        {
+          name: 'Usage:',
+          value: `${process.env.GlobalPrefix}poll <topic>`
+        }
+      ]
+    })
       return;
   }
 

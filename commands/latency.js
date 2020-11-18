@@ -34,7 +34,7 @@ exports.run = (Client, message, args) => {
       thumbnail:
         "https://www.iconsdb.com/icons/preview/white/ping-pong-xxl.png",
       color: color,
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   } else if (
     Math.round(Client.ws.ping) >= 60 &&
@@ -57,7 +57,7 @@ exports.run = (Client, message, args) => {
       thumbnail:
         "https://www.iconsdb.com/icons/preview/white/ping-pong-xxl.png",
       color: color,
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   } else if (Math.round(Client.ws.ping) >= 100) {
     color = "#eb1d02";
@@ -78,7 +78,7 @@ exports.run = (Client, message, args) => {
       thumbnail:
         "https://www.iconsdb.com/icons/preview/white/ping-pong-xxl.png",
       color: color,
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   }
 };

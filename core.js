@@ -1,4 +1,4 @@
-// VERSION: 0.17.21-a814ac94385cd31b93d70555b692bfbe9b4b2d08
+// VERSION: 0.17.21-HARDWICK
 // ~~~~~~ DO NOT DELETE THE UPPER LINE. LIKE, EVER. ~~~~~~
 const Discord = require('discord.js');
 const Client = new Discord.Client();
@@ -146,13 +146,41 @@ class Prismal {
         this.message.reply(Embed);
       }
       
+    } else if (type === 'generic-dm') {
+      const Embed = new Discord.MessageEmbed();
+      Embed.setColor(color);
+      if (typeof author !== 'undefined') Embed.setAuthor(author);
+      if (typeof name !== 'undefined' || typeof icon !== 'undefined' || typeof nameUrl !== 'undefined') Embed.setAuthor(name, icon, nameUrl);
+      Embed.setTitle(title);
+      if (typeof url !== 'undefined') Embed.setURL(url);
+      if (typeof thumbnail !== 'undefined') Embed.setThumbnail(thumbnail);
+      if (content instanceof Array) { // if content is not a discord embed field (name on top, value under it), send it as a default text field "description"
+        Embed.addFields(content);
+      } else if (!(content instanceof Array) && typeof content !== 'undefined'){
+        Embed.setDescription(content);
+      }
+      if (typeof image !== 'undefined') Embed.setImage(image);
+      if (typeof footer !== 'undefined' && typeof footerIcon == 'undefined') {
+        Embed.setFooter(footer);
+      } else if (typeof footer !== 'undefined' && typeof footerIcon !== 'undefined') {
+        Embed.setFooter(footer, footerIcon);
+      }
+      if (typeof tmpTime !== 'undefined' && typeof tmpTime == "number") {
+        this.message.delete({timeout: 1})
+        this.message.author.send(Embed)
+        .then(msg => {msg.delete({timeout: tmpTime*1000}).catch(console.error)})
+      } else {
+        this.message.delete({timeout: 1})
+        this.message.author.send(Embed);
+      }
+      
     } else if (type === 'help') {
 
       const Embed = new Discord.MessageEmbed();
       Embed.setColor(color);
       if (typeof author !== 'undefined') Embed.setAuthor(author);
       if (typeof name !== 'undefined' || typeof icon !== 'undefined' || typeof nameUrl !== 'undefined') Embed.setAuthor(name, icon, nameUrl);
-      Embed.setTitle(`ℹ️ ${process.env.BotName} — Help`);
+      Embed.setTitle(`Help — ${process.env.BotName}`);
       if (content instanceof Array) {
         Embed.addFields(content);
       } else if (!(content instanceof Array) && typeof content !== 'undefined'){
@@ -167,18 +195,18 @@ class Prismal {
       }
       if (typeof tmpTime !== 'undefined' && typeof tmpTime == "number") {
         this.message.delete({timeout: 1})
-        this.message.reply(Embed)
+        this.message.author.send(Embed)
         .then(msg => {msg.delete({timeout: tmpTime*1000}).catch(console.error)})
       } else {
         this.message.delete({timeout: 1})
-        this.message.reply(Embed);
+        this.message.author.send(Embed);
       }
     } else if (type === 'help-cmd') {
       const Embed = new Discord.MessageEmbed();
       Embed.setColor(color);
       if (typeof author !== 'undefined') Embed.setAuthor(author);
       if (typeof name !== 'undefined' || typeof icon !== 'undefined' || typeof nameUrl !== 'undefined') Embed.setAuthor(name, icon, nameUrl);
-      Embed.setTitle(`ℹ️ ${title} — Help`);
+      Embed.setTitle(`Help — ${title}`);
       Embed.addFields(content);
       if (typeof url !== 'undefined') Embed.setURL(url);
       if (typeof thumbnail !== 'undefined') Embed.setThumbnail(thumbnail);
@@ -199,18 +227,14 @@ class Prismal {
       const Embed = new Discord.MessageEmbed();
       Embed.setColor(0xeb1d02);
       if (typeof author !== 'undefined') Embed.setAuthor(author);
-      Embed.setTitle(`⛔ Error — ${title}`);
+      Embed.setTitle(`Error — ${title}`);
       if (content instanceof Array) {
         Embed.addFields(content);
       } else if (!(content instanceof Array) && typeof content !== 'undefined'){
         Embed.setDescription(content);
       }
-      if (typeof thumbnail !== 'undefined') Embed.setThumbnail(thumbnail);
-      if (typeof footer !== 'undefined' && typeof footerIcon == 'undefined') {
-        Embed.setFooter(footer);
-      } else if (typeof footer !== 'undefined' && typeof footerIcon !== 'undefined') {
-        Embed.setFooter(footer, footerIcon);
-      }
+      Embed.setThumbnail('https://www.iconsdb.com/icons/preview/white/warning-2-xxl.png');
+      Embed.setFooter(`Hardwick | ${process.env.VersionNum}`);
       if (typeof tmpTime !== 'undefined' && typeof tmpTime == "number") {
         this.message.delete({timeout: 1})
         this.message.reply(Embed)

@@ -1,7 +1,7 @@
 {
-    "name": "Update",
-    "description": "Displays any upcoming Hardwick updates if any",
+    "name": "update",
+    "description": "Displays any upcoming Hardwick updates, if any.",
     "aliases": [],
     "tip": "Make sure to report any bugs once an update is released!",
-    "usage": "+update"
+    "usage": "update"
 }

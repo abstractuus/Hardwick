@@ -25,7 +25,7 @@ exports.run = (Client, message, args) => {
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png",
       content: "Please enter a **valid** equation to be solved.",
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   }
 
@@ -45,6 +45,6 @@ exports.run = (Client, message, args) => {
         value: answer,
       },
     ],
-    footer: "Hardwick",
+    footer: `Hardwick | ${process.env.VersionNum}`
   });
 };

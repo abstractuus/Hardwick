@@ -1,7 +1,7 @@
 {
-    "name": "Slot",
+    "name": "slot",
     "description": "Rolls the slot machine. What outcome can you get?",
     "aliases": [],
     "tip": "Make sure to blow before pulling the lever!",
-    "usage": "+slot"
+    "usage": ""
 }

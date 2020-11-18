@@ -13,7 +13,7 @@ exports.run = (Client, message, args) => {
         "There are no emojis present in this server. Try adding some first!",
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png",
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`,
     });
     return;
   }
@@ -34,7 +34,7 @@ exports.run = (Client, message, args) => {
         value: "Hover over an emoji to see the name.",
       },
     ],
-    footer: "Hardwick",
+    footer: `Hardwick | ${process.env.VersionNum}`,
     color: "#dadfe8",
   });
 };

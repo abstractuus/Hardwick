@@ -1,7 +1,7 @@
 {
-    "name": "Remind",
-    "description": "Set a reminder with a timer and Hardwick will make sure to update you when it finishes",
+    "name": "remind",
+    "description": "Set a reminder with a set duration.",
     "aliases": [],
     "tip": "Make sure that you format the reminder properly",
-    "usage": "+remind <time> <reminder>"
+    "usage": "<time> <reminder>"
 }

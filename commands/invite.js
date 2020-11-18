@@ -12,7 +12,7 @@ exports.run = (Client, message, args) => {
       content: `[Invite Hardwick](${link})`,
       thumbnail: "https://pbs.twimg.com/media/Dj3fVupV4AAhIwD.png:large",
       color: "#FDFDFD",
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   });
 };

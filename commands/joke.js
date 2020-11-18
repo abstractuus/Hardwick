@@ -27,6 +27,6 @@ exports.run = (Client, message, args) => {
     content: sayings[result],
     thumbnail: "https://pbs.twimg.com/media/DkBhhw_VsAAic7S.png:large",
     color: "#FDFDFD",
-    footer: "Hardwick",
+    footer: `Hardwick | ${process.env.VersionNum}`
   });
 };

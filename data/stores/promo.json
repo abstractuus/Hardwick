@@ -1,7 +1,7 @@
 {
-    "name": "Promo",
-    "description": "Displays my developer's contact.",
+    "name": "promo",
+    "description": "Displays my developers' contact info.",
     "aliases": [],
     "tip": "Give my developer some support!",
-    "usage": "+promo"
+    "usage": ""
 }

@@ -1,7 +1,7 @@
 {
-    "name": "Latency",
+    "name": "latency",
     "description": "Reports latency between servers and Discord API.",
     "aliases": [],
     "tip": "Am I speedy enough?",
-    "usage": "+latency"
+    "usage": ""
 }

@@ -1,7 +1,7 @@
 {
-    "name": "Avatar",
-    "description": "Displays a mentioned user's discord profile picture",
+    "name": "avatar",
+    "description": "Displays a mentioned user's Discord profile picture.",
     "aliases": [],
     "tip": "Make sure that you mention the user.",
-    "usage": "+avatar <@user>"
+    "usage": "<@user>"
 }

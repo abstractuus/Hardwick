@@ -24,7 +24,7 @@ exports.run = async (Client, message, args) => {
                 }
             ],
             color: '#FDFDFD',
-            footer: 'Hardwick',
+            footer: `Hardwick | ${process.env.VersionNum}`,
             thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png'
         });
     });
@@ -35,7 +35,7 @@ exports.run = async (Client, message, args) => {
         url: res.urbanURL,
         thumbnail: 'https://www.iconsdb.com/icons/preview/white/literature-xxl.png',
         color: '#FDFDFD',
-        footer: 'Hardwick',
+        footer: `Hardwick | ${process.env.VersionNum}`,
         content: [
             {
                 name: 'Definition:',

@@ -18,7 +18,7 @@ exports.run = (Client, message, args) => {
         ],
         thumbnail: message.author.displayAvatarURL(),
         color: '#FDFDFD',
-        footer: 'Hardwick',
+        footer: `Hardwick | ${process.env.VersionNum}`,
         tmpTime: 5
     });
     return;

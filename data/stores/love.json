@@ -1,7 +1,7 @@
 {
     "name": "love",
-    "description": "Checks romantic compatibility between two users",
+    "description": "Checks romantic compatibility between two users.",
     "aliases": [],
     "tip": "Make sure that you mention two users.",
-    "usage": "+love <@user1> <@user1>"
+    "usage": "<@user1> <@user2>"
 }

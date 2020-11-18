@@ -1,7 +1,7 @@
 {
-    "name": "Advice",
-    "description": "Sends you some unsolicited advice",
+    "name": "advice",
+    "description": "Sends you some unsolicited advice.",
     "aliases": [],
     "tip": "Hardwick and its developers are not responsible for any advice received.",
-    "usage": "+advice"
+    "usage": ""
 }

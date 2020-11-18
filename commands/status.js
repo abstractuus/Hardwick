@@ -34,6 +34,6 @@ exports.run = (Client, message, args) => {
 				value: message.guild.members.cache.filter(member => member.user.bot).size
 			}
 		],
-		footer: 'Hardwick'
+		footer: `Hardwick | ${process.env.VersionNum}`
 	})
 }

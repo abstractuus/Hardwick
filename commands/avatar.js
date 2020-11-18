@@ -21,7 +21,7 @@ exports.run = (Client, message, args) => {
       title: `${user.username}#${user.discriminator}`,
       image: image,
       color: "#FDFDFD",
-      footer: "Hardwick",
+      footer: `Hardwick | ${process.env.VersionNum}`
     });
   }
 };

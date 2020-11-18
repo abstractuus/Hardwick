@@ -1,7 +1,7 @@
 {
-    "name": "RoleInfo",
+    "name": "roleinfo",
     "description": "Displays information for specified role.",
     "aliases": [],
     "tip": "Make sure that you mention the correct role. Remember, role names are case sensitive.",
-    "usage": "+roleinfo <@role>"
+    "usage": "<@role>"
 }

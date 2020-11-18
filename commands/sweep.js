@@ -9,7 +9,7 @@ exports.run = async (Client, message, args) => {
     // get the delete count as an actual number.
     const amount = Math.trunc(args[0]);
     
-    if (!amount || amount < 1 || amount > 100) {
+    if (!amount || amount < 1 || amount > 99) {
         const helpScript = require(path.resolve(__dirname, './help.js'));
         helpScript.run(Client, message, (args = 'sweep'));
         Prismal.derror('sweep', 'Number is invalid, contacting help handler');

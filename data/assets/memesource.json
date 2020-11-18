@@ -1,15 +1,52 @@
 {
-
- "look":"./meme/look.jpg",
- "girl":"./meme/girl.jpeg",
- "hozier":"./meme/hozier.jpg",
- "puta":"./meme/puta.jpeg",
- "donotsee":"./meme/donotsee.jpg",
- "jayson":"./meme/groomer.jpg",
- "noflavour":"./meme/noflavour.jpeg",
- "crickets":"./meme/crickets.mp4",
- "dorime":"./meme/dorime.mp4",
- "mipan":"./meme/mipan.mp4",
- "kys":"./meme/kys.mp4"
-
+    "look": {
+        "type": "image",
+        "description": "SpongeBob looking on with red eyes.",
+        "filePath": "./data/assets/meme/look.jpg"
+    },
+    "hozier": {
+        "type": "image",
+        "description": "Yah, gurul— ahahaha...",
+        "filePath": "./data/assets/meme/hozier.jpg"
+    },
+    "puta": {
+        "type": "image",
+        "description": "Dora staring at that wannabe bitch.",
+        "filePath": "./data/assets/meme/puta.jpeg"
+    },
+    "donotsee": {
+        "type": "image",
+        "description": "I pretend I do not see it...",
+        "filePath": "./data/assets/meme/donotsee.jpg"
+    },
+    "jayson": {
+        "type": "image",
+        "description": "So what I did on Epstein's island?",
+        "filePath": "./data/assets/meme/groomer.jpg"
+    },
+    "noflavour": {
+        "type": "image",
+        "description": "Woman from SpongeBob disappointed while eating a Krabby Patty.",
+        "filePath": "./data/assets/meme/noflavour.jpeg"
+    },
+    "crickets": {
+        "type": "video",
+        "description": "Veggie Tales characters staring at each other...",
+        "filePath": "./data/assets/meme/crickets.mp4"
+    },
+    "dorime": {
+        "type": "video",
+        "description": "Mouse dressed as a pope with \"dori me interimo, adapare, dori me...\" playing.",
+        "filePath": "./data/assets/meme/dorime.mp4"
+    },
+    "mipan": {
+        "type": "video",
+        "description": "Mi pan, su su sum, su su sum...",
+        "filePath": "./data/assets/meme/mipan.mp4"
+    },
+    "kys": {
+        "type": "video",
+        "description": "Dr. Phil disappearing!",
+        "filePath": "./data/assets/meme/kys.mp4"
+    }
 }

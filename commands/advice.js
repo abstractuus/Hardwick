@@ -20,8 +20,8 @@ exports.run = (Client, message, args) => {
         content: advice.slip.advice,
         thumbnail:
           "https://toppng.com/download/zosAhRyq14qYLFhMzkN0klG1gT7OCYXjtiDubyBZ17RMhAtiEevA7GWNbg88GFeOopM9P35Sok77EZjrcTSw8FzrcmhCnTyOOb04Z8RSV9iKHdCwYaoIffPfJn8xvvT7R0KY17wtm91MsQICGukQ58tow50Ke4amuO631KoWJ0oAqUryjjclRKJszPPampihaWhNzdf3/large",
-        footer: "Hardwick",
-        color: "#FDFDFD",
+        footer: `Hardwick | ${process.env.VersionNum}`,
+        color: "#FDFDFD"
       });
     } else {
       Prismal.error(

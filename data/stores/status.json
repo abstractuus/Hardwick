@@ -1,7 +1,7 @@
 {
-    "name": "Status",
-    "description": "Displays server statistics such as: Owner, Date Created and Member Count",
+    "name": "status",
+    "description": "Displays server statistics such as: Owner, Date Created and Member Count.",
     "aliases": [],
     "tip": "If your server has more bots than humans then they shall be your AI overlords.",
-    "usage": "+status"
+    "usage": ""
 }

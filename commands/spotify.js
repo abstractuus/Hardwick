@@ -72,7 +72,7 @@ exports.run = (Client, message, args) => {
           title: "Track information:",
           content: [
             {
-              name: "Song name:",
+              name: "Title:",
               value: trackName,
               inline: true
             },
@@ -93,7 +93,8 @@ exports.run = (Client, message, args) => {
             }
           ],
           thumbnail: trackImg,
-          color: "#FDFDFD"
+          color: "#FDFDFD",
+          footer: `Hardwick | ${process.env.VersionNum}`
         });
         return;
       }
@@ -117,7 +118,7 @@ exports.run = (Client, message, args) => {
         }
       ],
       thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Exclamation_mark_white_icon.svg/2000px-Exclamation_mark_white_icon.svg.png',
-      footer: 'Hardwick'
+      footer: `Hardwick | ${process.env.VersionNum}`
     })
     return;
   }
