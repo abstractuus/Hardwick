@@ -44,7 +44,7 @@ exports.run = (Client, message, args, devPerms) => {
         type: "generic",
         title: "Command reloaded",
         content: `${process.env.BotName} has reloaded **${args[1]}**.`,
-        thumbnail: 'https://www.iconsdb.com/icons/preview/white/refresh-2-xxl.png',
+        thumbnail: 'https://www.iconsdb.com/icons/preview/white/sinchronize-xxl.png',
         footer: `Hardwick | ${process.env.VersionNum}`,
         color: '#FDFDFD',
         tmpTime: 5
