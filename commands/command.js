@@ -32,7 +32,7 @@ exports.run = (Client, message, args, devPerms) => {
       title: "Commands recognized",
       content: commandList,
       color: '#FDFDFD',
-      thumbnail: 'https://www.iconsdb.com/icons/preview/white/code-xxl.png',
+      thumbnail: 'https://www.iconsdb.com/icons/preview/white/code-2-xxl.png',
       footer: `Hardwick | ${process.env.VersionNum}`,
       tmpTime: 10
     });
