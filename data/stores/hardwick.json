@@ -1,7 +1,15 @@
 {
-    "name": "hardwick",
-    "description": "Provides a welcome note from my developers and I.",
-    "aliases": [],
-    "tip": "Please consider donating to my developers. This helps with development costs.",
-    "usage": ""
+    "en_US": {
+        "name": "hardwick",
+        "description": "Provides a welcome note from my developers and I.",
+        "aliases": [],
+        "tip": "Please consider donating to my developers. This helps with development costs.",
+        "usage": ""
+    },
+    "fr_FR": {
+        
+    },
+    "es_ES": {
+        
+    }
 }

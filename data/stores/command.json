@@ -1,16 +1,24 @@
 {
-	"name": "command",
-	"description": "List and reload commands.",
-	"usage": "[subcommand]",
-	"subcommands": [{
-			"name": "list",
-			"description": "List commands loaded",
-			"usage": "list"
-		},
-		{
-			"name": "reload",
-			"description": "Reload specified command(s)",
-			"usage": "reload [...commands]"
-		}
-	]
+	"en_US": {
+		"name": "command",
+		"description": "List and reload commands.",
+		"usage": "[subcommand]",
+		"subcommands": [{
+				"name": "list",
+				"description": "List commands loaded",
+				"usage": "list"
+			},
+			{
+				"name": "reload",
+				"description": "Reload specified command(s)",
+				"usage": "reload [...commands]"
+			}
+		]
+	},
+	"fr_FR": {
+		
+	},
+	"es_ES": {
+		
+	}
 }

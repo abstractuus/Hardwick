@@ -1,7 +1,15 @@
 {
-    "name": "calc",
-    "description": "Calculates mathematical equations.",
-    "aliases": [],
-    "tip": "This is reserved for non big brained people.",
-    "usage": "<equation>"
+    "en_US": {
+        "name": "calc",
+        "description": "Calculates mathematical equations.",
+        "aliases": [],
+        "tip": "This is reserved for non big brained people.",
+        "usage": "<equation>"
+    },
+    "fr_FR": {
+        
+    },
+    "es_ES": {
+        
+    }
 }
