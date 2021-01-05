@@ -1,7 +1,23 @@
 {
-    "name": "advice",
-    "description": "Sends you some unsolicited advice.",
-    "aliases": [],
-    "tip": "Hardwick and its developers are not responsible for any advice received.",
-    "usage": ""
+    "en_US": {
+        "name": "advice",
+        "description": "Sends you some unsolicited advice.",
+        "aliases": [],
+        "tip": "Hardwick and its developers are not responsible for any advice received.",
+        "usage": ""
+    },
+    "fr_FR": {
+        "name": "conseils",
+        "description": "Envoie des conseils non sollicités.",
+        "aliases": [],
+        "tip": "Hardwick et ses développeurs ne sont pas responsables des conseils qui vous sont donnés.",
+        "usage": ""
+    },
+    "es_ES": {
+        "name": "consejo",
+        "description": "Te envía algunos consejos no solicitados.",
+        "aliases": [],
+        "tip": "Hardwick y sus desarrolladores no son responsables de ningún consejo dado.",
+        "usage": ""
+    }
 }

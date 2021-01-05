@@ -1,7 +1,19 @@
 {
-    "name": "avatar",
-    "description": "Displays a mentioned user's Discord profile picture.",
-    "aliases": [],
-    "tip": "Make sure that you mention the user.",
-    "usage": "<@user>"
+    "en_US": {
+        "name": "avatar",
+        "description": "Displays the avatar of a mentioned user.",
+        "aliases": [],
+        "tip": "Make sure that you mention the user.",
+        "usage": "<@user>"
+    },
+    "fr_FR": {
+        
+    },
+    "es_ES": {
+        "name": "avatar",
+        "description": "Muestra el avatar de un usuario especificado.",
+        "aliases": [],
+        "tip": "Asegúrate de mencionar al usuario.",
+        "usage": "<@usuario>"
+    }
 }
