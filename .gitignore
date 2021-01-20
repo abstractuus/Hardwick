@@ -1,3 +1,5 @@
 node_modules
 .vscode
 .nova
+.env
+package-lock.json

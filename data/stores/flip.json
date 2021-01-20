@@ -1,15 +1,7 @@
 {
-    "en_US": {
-        "name": "flip",
-        "description": "Flips a coin and displays the result.",
-        "aliases": [],
-        "tip": "Always choose heads because my calculations deem that outcome most likely.(Don't listen to me)",
-        "usage": ""
-    },
-    "fr_FR": {
-        
-    },
-    "es_ES": {
-        
-    }
+    "name": "flip",
+    "description": "Flips a coin and displays the result.",
+    "aliases": [],
+    "tip": "Always choose heads because my calculations deem that outcome most likely.(Don't listen to me)",
+    "usage": ""
 }

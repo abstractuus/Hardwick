@@ -1,19 +1,7 @@
 {
-    "en_US": {
-        "name": "broadcast",
-        "description": "Sends a broadcast through in the current Discord channel.",
-        "aliases": [],
-        "tip": "Make that broadcast worthwhile.",
-        "usage": "<message>"
-    },
-    "fr_FR": {
-        
-    },
-    "es_ES": {
-        "name": "transmitir",
-        "description": "Envía un anuncio en el canal actual de Discord.",
-        "aliases": [],
-        "tip": "Haz que ese mensaje valga la pena.",
-        "usage": "<mensaje>"
-    }
+    "name": "broadcast",
+    "description": "Sends a broadcast through in the current Discord channel.",
+    "aliases": [],
+    "tip": "Make that broadcast worthwhile.",
+    "usage": "<message>"
 }

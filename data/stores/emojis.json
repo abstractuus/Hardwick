@@ -1,14 +1,7 @@
 {
-    "en_US": {
-        "name": "emojis",
-        "description": "Displays a list of the server's custom emojis.",
-        "aliases": [],
-        "tip": "Hover over an emoji to see the name.",
-        "usage": ""
-    },
-    "fr_FR": {
-    },
-    "es_ES": {
-        
-    }
+    "name": "emojis",
+    "description": "Displays a list of the server's custom emojis.",
+    "aliases": [],
+    "tip": "Hover over an emoji to see the name.",
+    "usage": ""
 }
