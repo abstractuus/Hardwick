@@ -1,0 +1,6 @@
+{
+    "name": "stop",
+    "description": "Clear the queue and stop playing.",
+    "aliases": ["x"],
+    "usage": ""
+}

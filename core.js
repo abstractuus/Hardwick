@@ -1,7 +1,9 @@
-// VERSION: 0.17.21-HARDWICK
+// VERSION: 0.17.30-HARDWICK
 // ~~~~~~ DO NOT DELETE THE UPPER LINE. LIKE, EVER. ~~~~~~
 const Discord = require('discord.js');
 const Client = new Discord.Client();
+const DisTube = require('distube');
+Client.distube = new DisTube(Client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true});
 const db = require('quick.db');
 const fs = require('fs');
 const path = require('path');

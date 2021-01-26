@@ -1,0 +1,6 @@
+{
+    "name": "pause",
+    "description": "Pause the current song.",
+    "aliases": [],
+    "usage": ""
+}
