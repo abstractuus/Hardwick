@@ -18,7 +18,7 @@ exports.run = (Client, message, args, tools) => {
     \ To shut off Hardwick, press '⏹'. Only my developer can do this.
     \ To view the current changelog, press '📳'.
     \ To view Hardwick's statistics, press '📶'.`)
-    .addField("Version:", "3.0.0")
+    .addField("Version:", process.env.VersionNum)
     .setThumbnail("https://cdn1.iconfinder.com/data/icons/MetroStation-PNG/256/MB__Control-Panel.png")
     .setFooter(`Hardwick | ${process.env.VersionNum}`)
 
