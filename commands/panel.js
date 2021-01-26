@@ -64,7 +64,7 @@ exports.run = (Client, message, args, tools) => {
                 .addField("• CPU usage", `\`${percent.toFixed(2)}%\``, true)
                 .addField("• Arch", `\`${os.arch()}\``, true)
                 .addField("• Platform", `\`\`${os.platform()}\`\``, true)
-                .addField("API Latency", `${Math.round(Client.ping)}ms`)
+                .addField("API Latency", `${Math.round(Client.ws.ping)}ms`)
             message.channel.send(embedStats)
         });
     });
