@@ -16,7 +16,7 @@ exports.run = (Client, message, args) => {
       },
       {
         name: "Version:",
-        value: "3.0.0",
+        value: process.env.VersionNum,
       },
       {
         name: "Developers:",
