@@ -1,6 +1,0 @@
-{
-    "name": "play",
-    "description": "Play a song from the given query or URL from a major music service.",
-    "aliases": ["p"],
-    "usage": "<query OR URL>"
-}
